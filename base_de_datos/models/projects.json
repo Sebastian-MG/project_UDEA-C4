@@ -1,0 +1,28 @@
+{
+  "ID": "string",
+  "name": "string",
+  "created_at": "Date",
+  "uptadet_at": "Date",
+  "deleted_at": "Date",
+  "types": {
+    "ID": "string",
+    "name": "string"
+  },
+  "states": {
+    "ID": "string",
+    "name": "string"
+  },
+  "users": [
+    {
+      "ID": "string",
+      "name": "string",
+      "email": "string",
+      "roles": [
+        {
+          "ID": "string",
+          "name": "string"
+        }
+      ]
+    }
+  ]
+}
