@@ -1,0 +1,72 @@
+db.project.insertOne({
+  _id: 3,
+  name: "Proyecto Diabetes mellitus tipo 2 y resistencia a la insulina.",
+  created_at: new Date("2010-09-23T08:00:00"),
+  update_at: new Date(),
+  types: [
+      {
+        _id: 4,
+        name: "Medicina"
+      },  
+      {
+        _id: 5,
+        name: "Quimica"
+      }
+    ],
+  states: {
+        code: 'CO',
+        name: "Completo",
+        description: "El proyecto esta completo"
+    },
+  users: [
+    {
+      name: "Enrique CIPRIANI-THORNE",
+      email: "enrique_cipriani@gmail.com",
+      roles: [
+        {
+            _id: 2,
+            name: "Profesor"
+        }
+      ]
+    },
+    {
+      name: "Alberto QUINTANILLA",
+      email: "alberto_quintanilla@gmail.com",
+      roles: [
+        {
+            _id: 2,
+            name: "Profesor"
+        }
+      ]
+    },
+    {
+      name: "Juanito Perez",
+      email: "juanito_colombia@gmail.com",
+      roles: [
+        {
+            _id: 1,
+            name: "Estudiante"
+        }
+      ]
+    }
+  ]
+})
+
+db.users.insertMany([
+    
+    {_id: 5, name: "Enrique Cipriani-Thorne", email: "enrique_cipriani@gmail.com", created_at: new Date("2021-09-18T13:00:00"), update_at: new Date(), 
+    telefono: "8765436",
+        roles: [
+        {
+            _id: 2,
+            name: "Profesor"
+        }
+        ]
+
+    }
+
+])
+
+db.project.find({ "users.email" : "juanito_colombia@gmail.com" })
+
+db.project.find({ "users.email" : "juanito_colombia@gmail.com" })
